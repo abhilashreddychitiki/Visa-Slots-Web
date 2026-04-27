@@ -1,0 +1,135 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(11, 19, 43, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 480px;
+  padding: 32px;
+  position: relative;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 24px 20px;
+    width: 95%;
+  }
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+  .modal-primary-date {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: var(--text-primary);
+}
+
+.modal-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.modal-header h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.modal-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.modal-primary-date {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-green);
+}
+
+.modal-total-count {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.dates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.date-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: var(--surface-color);
+  border: 1px solid var(--surface-border);
+}
+
+.date-text {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.slots-badge {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.clickable-row {
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.clickable-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.clickable-row:active {
+  transform: scale(0.98);
+}

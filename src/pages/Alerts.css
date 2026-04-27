@@ -1,0 +1,85 @@
+.alerts-page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.alerts-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 4px;
+}
+
+.alerts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.alert-card {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-trigger {
+  cursor: pointer;
+}
+
+.premium-trigger:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.active-card {
+  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.02);
+}
+
+.alert-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp { background: rgba(37, 211, 102, 0.15); color: #25D366; }
+.telegram { background: rgba(0, 136, 204, 0.15); color: #0088CC; }
+.email { background: rgba(245, 158, 11, 0.15); color: #F59E0B; }
+
+.alert-info {
+  flex: 1;
+}
+
+.alert-info h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.alert-info p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--surface-color);
+  color: var(--text-secondary);
+  border: 1px solid var(--surface-border);
+}
+
+.status-badge.active {
+  background: var(--accent-green-bg);
+  color: var(--accent-green);
+  border-color: rgba(16, 185, 129, 0.3);
+}

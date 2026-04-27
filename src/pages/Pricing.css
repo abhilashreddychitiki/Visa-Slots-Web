@@ -1,0 +1,239 @@
+.pricing-page {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.pricing-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.premium-badge {
+  background: var(--accent-green-bg);
+  color: var(--accent-green);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.pricing-header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-top: 24px;
+  letter-spacing: -1.5px;
+  background: linear-gradient(to bottom, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  margin-top: 12px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid var(--surface-border);
+}
+
+.pricing-card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 32px 64px -16px rgba(0, 0, 0, 0.5);
+}
+
+.card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.free-accent { background: #94a3b8; }
+.alert-60-accent { background: #E46633; }
+.alert-90-accent { background: #F1602B; }
+.stress-accent { background: #ff6b00; }
+
+.pricing-card.featured {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border-color: rgba(241, 96, 43, 0.3);
+}
+
+.popular-tag {
+  position: absolute;
+  top: 16px;
+  right: -30px;
+  background: #F1602B;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 4px 40px;
+  transform: rotate(45deg);
+  box-shadow: 0 4px 12px rgba(241, 96, 43, 0.3);
+}
+
+.card-top {
+  margin-bottom: 32px;
+}
+
+.plan-name {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+}
+
+.orange-text { color: #ff6b00; }
+
+.price-box {
+  margin-top: 12px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price-main {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -1px;
+}
+
+.price-sub {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.card-action {
+  margin-bottom: 32px;
+}
+
+.pricing-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  transition: all 0.2s;
+}
+
+.pricing-btn.outline {
+  border: 1px solid var(--surface-border);
+  color: var(--text-secondary);
+}
+
+.pricing-btn.primary {
+  background: #fff;
+  color: #000;
+}
+
+.pricing-btn.primary:hover {
+  background: var(--accent-green);
+  color: #000;
+}
+
+.pricing-btn.accent {
+  background: #ff6b00;
+  color: #fff;
+}
+
+.pricing-btn.glow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.feature-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.feature-item.disabled {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.icon-check { color: var(--accent-green); }
+.icon-x { color: var(--error); }
+.text-orange { color: #ff6b00; }
+
+.stress-name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pricing-links {
+  text-align: center;
+  padding-top: 40px;
+  border-top: 1px solid var(--surface-border);
+}
+
+.links-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.links-row a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.links-row a:hover {
+  color: var(--text-primary);
+}
+
+.dot { color: var(--surface-border); }
+
+.footer-note {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .pricing-header h1 {
+    font-size: 2.5rem;
+  }
+  .links-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
