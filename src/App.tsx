@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import Alerts from './pages/Alerts';
@@ -14,6 +15,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
         </Routes>
       </Layout>
+      <Analytics />
     </Router>
   );
 }
