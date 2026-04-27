@@ -1,26 +1,42 @@
 # Visa Slots Web
 
-React + TypeScript + Vite dashboard for viewing visa slot availability.
+A web dashboard for tracking U.S. visa appointment slot availability across Indian consulates and VAC locations.
 
-## Local Environment
+## What You Can Do
 
-Copy `.env.example` to `.env.local` and fill in local values:
+- View live slot availability for each city and appointment location.
+- Quickly spot the earliest available appointment date.
+- See total reported slots for each location.
+- Open a location detail view for the earliest known date and any available date breakdown returned by the API.
+- Compare high-availability locations from the sidebar.
+- Check recently updated locations at a glance.
+- Start a booking estimate flow from an available slot.
+- View alert options for WhatsApp, Telegram, and email notifications.
+- Compare available plans on the pricing page.
 
-```bash
-VITE_API_URL=https://app.checkvisaslots.com
-VITE_API_KEY=
-```
+## Main Screens
 
-Do not commit `.env.local`, `.env`, or any real API keys. The `.gitignore` file excludes local environment files and logs.
+### Dashboard
 
-Important: Vite exposes `VITE_*` variables to browser JavaScript at build time. This prevents accidental GitHub commits, but it does not keep the API key secret from end users. Use a backend or serverless proxy for any key that must remain private.
+The dashboard shows availability cards for consulate and VAC locations. Each card displays the location name, current availability status, earliest known date, total reported slots, and last update time.
 
-## Checks
+### Slot Details
 
-```bash
-npm run lint
-npm run build
-npm run check:secrets
-```
+Clicking a city opens a detail modal. When the API provides date-level data, the modal shows each available date and its corresponding slot count. When only the earliest date and total count are available, the modal clearly separates the total reported slots from the known earliest date.
 
-`check:secrets` scans committed source files for common secret patterns and hides any detected values in its output.
+### Alerts
+
+The alerts page shows notification options for users who want to be notified when appointments open.
+
+### Pricing
+
+The pricing page compares free, alert-based, and assisted booking plans.
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- TanStack Query
+- Zustand
+- Lucide icons
